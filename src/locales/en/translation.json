@@ -6,7 +6,7 @@
         "id-length": "The site ID must contain 24 characters",
         "invalid-id": "invalid ID"
       },
-      "send-button": "Send"
+      "send-button": "login"
     }
   },
   "analytics-page": {

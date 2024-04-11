@@ -1,29 +1,24 @@
 # lead-hit
+[Тестовое задание](https://docs.google.com/document/d/1kkBaZYmehNVgCMd76jdbvL8zTxgMsg63VWnDWdTdkiY/edit).
 
-This template should help get you started developing with Vue 3 in Vite.
+## 1. Описание
+Этот проект представляет собой приложение на Vue 3, использующее библиотеки Vue, Vue-i18n, Vue-router, Axios, и сборщик Vite. Приложение упаковано в Docker-compose для удобного развертывания и использования.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+## 2. Установка
+### Клонировать репозиторий:
 ```sh
-npm install
+git clone <URL репозитория>
 ```
 
-### Compile and Hot-Reload for Development
-
+### Перейти в каталог приложения:
 ```sh
-npm run dev
+cd lead-hit
 ```
 
-### Compile and Minify for Production
-
+### Запустить Docker-compose:
 ```sh
-npm run build
+docker-compose up --build -d
 ```
+
+## 3. Использование
+После успешного запуска Docker-compose приложение будет доступно по адресу http://localhost:8080.

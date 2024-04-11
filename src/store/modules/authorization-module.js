@@ -13,18 +13,22 @@ export const authorizationModule = {
             return state.leadHitSiteId;
         },
 
-        getIsMenu(state) {
-            return state.isMenu;
-        },
-
         getCurrentTheme(state) {
             return state.theme
+        },
+
+        getIsMenu(state) {
+            return state.isMenu;
         }
     },
 
     mutations: {
-        recordLeadHitSiteId(state, {leadHitSiteId}) {
+        recordLeadHitSiteId(state, { leadHitSiteId }) {
             state.leadHitSiteId = leadHitSiteId;
+        },
+
+        setTheme(state, { theme }) {
+            state.theme = theme
         },
 
         deleteID(state) {
@@ -35,27 +39,23 @@ export const authorizationModule = {
             state.theme = "";
         },
 
-        switchIsMenu(state, {condition}) {
+        switchIsMenu(state, { condition }) {
             state.isMenu = condition
-        },
-
-        setTheme(state, {theme}) {
-            state.theme = theme
         }
     },
 
     actions: {
-        fetch({commit}) {
-            commit('recordLeadHitSiteId', {leadHitSiteId: localStorage.getItem('leadhit-site-id')});
-            commit('setTheme', {theme: localStorage.getItem('theme')})
+        fetch({ commit }) {
+            commit('recordLeadHitSiteId', { leadHitSiteId: localStorage.getItem('leadhit-site-id') });
+            commit('setTheme', { theme: localStorage.getItem('theme') })
         },
 
-        update({getters}) {
+        update({ getters }) {
             localStorage.setItem('leadhit-site-id', getters["getLeadHitSiteId"]);
             localStorage.setItem('theme', getters["getCurrentTheme"])
         },
 
-        logInToYourAccount({commit, getters}, iDEnteredByTheUser) {
+        logInToYourAccount({ commit, getters }, iDEnteredByTheUser) {
             api
                 .get(`/client/test_auth`)
 
@@ -70,7 +70,7 @@ export const authorizationModule = {
                 .catch(e => console.error(e))
         },
 
-        logOutOfYourAccount({commit}) {
+        logOutOfYourAccount({ commit }) {
             commit("switchIsMenu", {condition: false})
             commit("deleteID");
             commit("deleteTheme")
@@ -78,10 +78,12 @@ export const authorizationModule = {
             router.push({path: '/authorization'});
         },
 
-        switchTheme({state}) {
-            state.theme = state.theme === 'light' ? 'dark' : 'light'
+        switchTheme({ commit, getters }) {
+            commit("setTheme", {
+                theme: getters["getCurrentTheme"] === 'light' ? 'dark' : 'light'
+            })
 
-            if (state.theme === 'light') {
+            if (getters["getCurrentTheme"] === 'light') {
                 document.documentElement.style.setProperty('--accent-color', '#ED202E')
                 document.documentElement.style.setProperty('--additional-color', '#000000')
                 document.documentElement.style.setProperty('--main-color', '#da4b1a')

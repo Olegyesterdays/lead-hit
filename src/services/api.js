@@ -1,8 +1,8 @@
 import axios from 'axios';
-import {useStore} from "vuex";
 
-const baseURL = window.api.URL; // Замените на ваш базовый URL
-const store = useStore();
+// const baseURL = window.api.URL; // Замените на ваш базовый URL
+const baseURL = "https://track-api.leadhit.io"; // Замените на ваш базовый URL
+
 const headers = {
     'Api-Key': "5f8475902b0be670555f1bb3:eEZn8u05G3bzRpdL7RiHCvrYAYo",
     'Leadhit-Site-Id': "5f8475902b0be670555f1bb3",

@@ -6,7 +6,7 @@
         "id-length": "ID сайта должен содержать 24 символа",
         "invalid-id": "Некорректный ID"
       },
-      "send-button": "Отправить"
+      "send-button": "Войти"
     }
   },
   "analytics-page": {
