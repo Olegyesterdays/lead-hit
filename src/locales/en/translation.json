@@ -1,0 +1,33 @@
+{
+  "authorization-page": {
+    "form": {
+      "site-ID": "Site ID",
+      "error-message": {
+        "id-length": "The site ID must contain 24 characters",
+        "invalid-id": "invalid ID"
+      },
+      "send-button": "Send"
+    }
+  },
+  "analytics-page": {
+    "page-title": "Analytics",
+    "chart-title": "Session analytics"
+  },
+  "welcome-page": {
+    "information-about-the-project": {
+      "annotation": "And this is my draft ",
+      "the-importance-of-the-project": "technical assignment",
+      "vacancy": "for the ",
+      "name-work": "Junior+/Middle Frontend developer/JavaScript developer of the company: E.Com"
+    },
+    "information-about-me": "Hi! My name is Vcherashniy Oleg",
+    "button-authorization": "Authorization"
+  },
+  "not-found-page": {
+    "header": "The page was not found",
+    "description": "Sorry, the requested page does not exist."
+  },
+  "menu": {
+    "exit": "Exit"
+  }
+}

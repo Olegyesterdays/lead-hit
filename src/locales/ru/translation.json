@@ -1,0 +1,33 @@
+{
+  "authorization-page": {
+    "form": {
+      "site-ID": "ID сайта",
+      "error-message": {
+        "id-length": "ID сайта должен содержать 24 символа",
+        "invalid-id": "Некорректный ID"
+      },
+      "send-button": "Отправить"
+    }
+  },
+  "analytics-page": {
+    "page-title": "Аналитика",
+    "chart-title": "Аналитика по визитам"
+  },
+  "welcome-page": {
+    "information-about-the-project": {
+      "annotation": "И это мой проект",
+      "the-importance-of-the-project": "технического задания",
+      "vacancy": "на вакансию",
+      "name-work": "Junior+/Middle Frontend-разработчик/JavaScript разработчик компании: е.Ком"
+    },
+    "information-about-me": "Привет! Меня зовут Вчерашний Олег",
+    "button-authorization": "Авторизация"
+  },
+  "not-found-page": {
+    "header": "Страница не найдена",
+    "description": "Извините, запрашиваемая страница не существует."
+  },
+  "menu": {
+    "exit": "Выйти"
+  }
+}
