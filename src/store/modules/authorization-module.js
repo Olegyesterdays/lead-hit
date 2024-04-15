@@ -82,7 +82,9 @@ export const authorizationModule = {
             commit("setTheme", {
                 theme: getters["getCurrentTheme"] === 'light' ? 'dark' : 'light'
             })
+        },
 
+        installingTheTheme({ getters }) {
             if (getters["getCurrentTheme"] === 'light') {
                 document.documentElement.style.setProperty('--accent-color', '#ED202E')
                 document.documentElement.style.setProperty('--additional-color', '#000000')
@@ -100,7 +102,7 @@ export const authorizationModule = {
                 document.documentElement.style.setProperty('--text-color-accent', '#FFFFFF')
                 document.documentElement.style.setProperty('--shadow-color', '#00000019')
             }
-        },
+        }
     },
 
     namespaced: true

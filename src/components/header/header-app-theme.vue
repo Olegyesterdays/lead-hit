@@ -19,6 +19,7 @@ const theme = computed(() => store.getters["authorizationModule/getCurrentTheme"
 
 function switchingTheTheme() {
   store.dispatch("authorizationModule/switchTheme")
+  store.dispatch("authorizationModule/installingTheTheme")
 }
 </script>
 
