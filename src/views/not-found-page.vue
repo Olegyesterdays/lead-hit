@@ -23,8 +23,12 @@
   display: flex;
   flex-direction: column;
 
-  h1 {
-    margin-top: 200px;
+  h1, p {
+    color: var(--text-color-accent);
+  }
+
+  p {
+    margin-bottom: 200px;
   }
 }
 </style>

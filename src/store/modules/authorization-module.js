@@ -57,7 +57,11 @@ export const authorizationModule = {
 
         logInToYourAccount({ commit, getters }, iDEnteredByTheUser) {
             api
-                .get(`/client/test_auth`)
+                .get(`/client/test_auth`, {
+                    headers: {
+                        'Leadhit-Site-Id': iDEnteredByTheUser
+                    }
+                })
 
                 .then(response => {
                     if (response.data.message === "ok") {
